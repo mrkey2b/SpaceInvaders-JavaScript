@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Invaders | MrKey2B</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <h1 class="game-title">Space Invaders</h1>
+
+    <div class="container">
+        <div class="game-area">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+        </div>
+        <div class="sidebar">
+            <h2>Score</h2>
+            <p id="score">0</p>
+            <h2>Niveau</h2>
+            <p id="level">1</p>
+            <h2>Meilleurs Scores</h2>
+            <ul id="bestScores">
+            </ul>
+            <div class="parameters">
+                <h2>Paramètres</h2>
+                <label for="playerSpeed">Vitesse du joueur</label>
+                <input type="number" id="playerSpeed" value="7" min="1" max="20">
+                <label for="invaderSpeed">Vitesse des envahisseurs</label>
+                <input type="number" id="invaderSpeed" value="2" min="1" max="10">
+                <button id="startGame">Démarrer la partie</button>
+            </div>            
+        </div>
+    </div>
+
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over</h2>
+            <p>Votre score : <span id="finalScore"></span></p>
+            <p>Meilleur score : <span id="bestScore"></span></p>
+            <p>La partie va recommencer dans 10 secondes...</p>
+        </div>
+    </div>
+
+    <div class="svg-container">
+        <img src="./img/player.svg" class="random-svg" id="svg1">
+        <img src="./img/player.svg" class="random-svg" id="svg2">
+        <img src="./img/player.svg" class="random-svg" id="svg3">
+        <img src="./img/player.svg" class="random-svg" id="svg4">
+    </div>
+    
+    <footer>
+        Codé avec ❤️ par @mrkey2b - 2024
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
